@@ -1,6 +1,7 @@
 /* MOBILE AND GLOBAL STYLES */
 
 /* applies to screens smaller than 500px (first breakpoint) */
+
 /* and above unless overwritten below */
 
 body {
@@ -13,8 +14,8 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: "head"
-    "nav"
-    "content"
+                        "nav"
+                        "content"
 }
 
 header {
@@ -79,9 +80,7 @@ main {
   resize: none;
   height: 6em;
   margin-bottom: .3em;
-
 }
-
 
 /* TABLET STYLES */
 
@@ -99,15 +98,15 @@ main {
     flex-direction: column;
     align-items: center;
   }
-  .input-box{
+
+  .input-box {
     width: 60%;
   }
+
   .form-container textarea {
     height: 10rem;
   }
 }
-
-
 
 /* DESKTOP STYLES */
 
@@ -121,7 +120,7 @@ main {
     grid-gap: 1rem;
   }
 
-  .input-box{
+  .input-box {
     width: 55em;
   }
 }
