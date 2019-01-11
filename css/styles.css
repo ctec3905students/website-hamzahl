@@ -5,6 +5,7 @@
 
 body {
   background: rgb(236, 236, 236);
+  box-sizing: border-box;
 }
 
 .grid {
@@ -54,7 +55,32 @@ main {
   flex-direction: column;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
 
+.form-container label {
+  margin: .3em 0 .1em 0;
+}
+
+.input-box {
+  padding: .5em;
+}
+
+.form-container input {
+  background-color: white;
+  text-align: left;
+}
+
+.form-container textarea {
+  /* removes users ability to resize the textarea */
+  resize: none;
+  height: 6em;
+  margin-bottom: .3em;
+
+}
 
 
 /* TABLET STYLES */
@@ -67,6 +93,17 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     grid-gap: 1rem;
+  }
+
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-box{
+    width: 60%;
+  }
+  .form-container textarea {
+    height: 10rem;
   }
 }
 
@@ -82,5 +119,9 @@ main {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     grid-gap: 1rem;
+  }
+
+  .input-box{
+    width: 55em;
   }
 }
