@@ -5,6 +5,7 @@
 
 body {
   background: rgb(236, 236, 236);
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -23,6 +24,26 @@ header {
 
 nav {
   grid-area: nav;
+  border: 1px solid red;
+}
+
+.main-nav { 
+  list-style-type: none;
+}
+
+.main-nav li {
+  text-align: center; 
+}
+
+.nav-links {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1em;
+}
+
+a.nav-links:hover {
+  color: blueviolet;
 }
 
 main {
@@ -88,6 +109,14 @@ main {
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
+  nav {
+    flex-direction: row;
+  }
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
   .inner-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
