@@ -14,16 +14,43 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: "head"
-                        "nav"
-                        "content"
+    "nav"
+    "content"
 }
 
 header {
   grid-area: head;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
   grid-area: nav;
+}
+
+.main-nav {
+  list-style-type: none;
+  border-bottom: 1px solid red;
+  display: none;
+}
+
+.main-nav li {
+  text-align: right;
+}
+
+.nav-links {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1em;
+  animation: fade-in 1s ease-in-out;
+}
+
+
+
+a.nav-links:hover {
+  color: blueviolet;
 }
 
 main {
@@ -82,11 +109,83 @@ main {
   margin-bottom: .3em;
 }
 
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  cursor: pointer;
+  animation: fade-in 1s ease-in-out;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 2.5px;
+  background-color: red;
+  transition: all .25s ease-in;
+}
+
+.toggle .line1 {
+  transform: rotate(45deg) translate(0px, 11px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg) translate(0px, -11px)
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  animation: slide-down 1s;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
+  .burger {
+    visibility: hidden;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   .inner-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
