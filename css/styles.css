@@ -26,11 +26,11 @@ header {
 
 nav {
   grid-area: nav;
-  border: 1px solid red;
 }
 
 .main-nav { 
   list-style-type: none;
+  border-bottom: 1px solid red;
   display: none;
 }
 
@@ -43,7 +43,10 @@ nav {
   text-decoration: none;
   color: black;
   font-size: 1.1em;
+  animation: fade-in 1s ease-in-out;
 }
+
+
 
 a.nav-links:hover {
   color: blueviolet;
@@ -109,6 +112,7 @@ main {
   flex-direction: column;
   align-content: center; 
   cursor: pointer;
+  animation: fade-in 1s ease-in-out;
 }
 
 .burger div {
@@ -116,7 +120,7 @@ main {
   height: 3px;
   margin: 2.5px;
   background-color: red;
-  transition: all .3s ease-in;
+  transition: all .25s ease-in;
 }
 
 .toggle .line1{
@@ -133,6 +137,18 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    animation: slide-down 1s;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+@keyframes slide-down {
+  0% { opacity: 0; transform: translateY(-100%);}
+  100% { opacity: 1; transform: translateY(0%);}
 }
 
 
@@ -142,7 +158,7 @@ main {
 
   /* applies to screens wider than 499px */
   .burger { 
-    display: none;
+    visibility: hidden;
   }
 
   nav {
@@ -159,7 +175,6 @@ main {
     grid-auto-rows: auto;
     grid-gap: 1rem;
   }
-
   .form-container {
     flex-direction: column;
     align-items: center;
