@@ -20,6 +20,9 @@ body {
 
 header {
   grid-area: head;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
@@ -29,10 +32,11 @@ nav {
 
 .main-nav { 
   list-style-type: none;
+  display: none;
 }
 
 .main-nav li {
-  text-align: center; 
+  text-align: right; 
 }
 
 .nav-links {
@@ -100,7 +104,20 @@ main {
   resize: none;
   height: 6em;
   margin-bottom: .3em;
+}
 
+.burger div {
+  width: 25px;
+  height: 5px;
+  background-color: red;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 
@@ -109,6 +126,10 @@ main {
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
+  .burger { 
+    display: none;
+  }
+
   nav {
     flex-direction: row;
   }
