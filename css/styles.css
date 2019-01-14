@@ -63,16 +63,17 @@ main {
 }
 
 .project {
-  border: 2px solid #050404;
+  border: 1px solid #050404;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
 .project-details {
   display: flex;
   flex-direction: column;
-  /* flex: 1; */
+  flex: 1; 
 }
 
 .skill {
@@ -148,6 +149,20 @@ section {
 
 .about-me {
   line-height: 1.8;
+}
+
+.project-image img{
+  height: 10em;
+  width: 100%;
+  opacity: .25;
+}
+
+.project-name {
+  position: absolute;
+  top: 7.5em;
+  left: 0;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 /* Animations */
