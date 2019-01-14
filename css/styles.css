@@ -70,9 +70,14 @@ main {
   position: relative;
 }
 
+.project-image {
+  width: 100%;
+}
+
 .project-details {
   display: flex;
   flex-direction: column;
+  alig-items: space-around;
   flex: 1; 
 }
 
@@ -154,7 +159,12 @@ section {
 .project-image img{
   height: 10em;
   width: 100%;
-  opacity: .25;
+  opacity: .35;
+  transition: all 1s;
+}
+
+.project-image img:hover {
+  opacity: 1;
 }
 
 .project-name {
