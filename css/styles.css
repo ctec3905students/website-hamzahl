@@ -47,8 +47,6 @@ nav {
   animation: fade-in 1s ease-in-out;
 }
 
-
-
 a.nav-links:hover {
   color: blueviolet;
 }
@@ -142,6 +140,14 @@ main {
   flex-direction: column;
   justify-content: flex-end;
   animation: slide-down 1s;
+}
+
+section {
+  text-align: center;
+}
+
+.about-me {
+  line-height: 1.8;
 }
 
 /* Animations */
