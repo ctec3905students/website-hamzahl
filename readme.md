@@ -10,6 +10,7 @@ Initial code for the website was taken from the boilerplate code that was alread
   4. Scroll down and click Clear site data
   5. Refresh browser
 ![Stylesheet issue fix](https://i.imgur.com/TeXNm9Y.png "Steps to fix stylesheet issue")
+* Although Validator warns of following: `Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.`. After a discussion with Fania, she mentioned it would be best of ignoring this error.
 
 # References
 * Body Grid layout for overall webpage was adapted from my Lab 6 work
