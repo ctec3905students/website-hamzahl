@@ -77,7 +77,6 @@ main {
 .project-details {
   display: flex;
   flex-direction: column;
-  alig-items: space-around;
   flex: 1; 
 }
 
