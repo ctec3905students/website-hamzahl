@@ -12,6 +12,7 @@ This assignment is centred around a Single Page Application and aims to act as a
 ![Stylesheet issue fix](https://i.imgur.com/TeXNm9Y.png "Steps to fix stylesheet issue")
 * Although Validator warns of following: `Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.`. After a discussion with Fania, she mentioned it would be best of ignoring this error.
 * Only real project i have worked on is the iSAMS project. The rest are just placeholders and included for the purpose of this assignment.
+* Attempted to use `<progress>` tags for the skill bars however some issues were being caused with webkit therefore this couldn't be used for the purpose of this assignment
 
 # References
 * Body Grid layout for overall webpage was adapted from my Lab 6 work
