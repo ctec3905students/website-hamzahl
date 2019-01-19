@@ -1,5 +1,5 @@
 # CTEC3905 Assignment
-Initial code for the website was taken from the boilerplate code that was already generated.
+This assignment is centred around a Single Page Application and aims to act as a portfolio where I can showcase my skills and experience. Initial code for the website was taken from the boilerplate code that was already generated.
 
 # Notes
 * Slight issue with the branching (the branch was displayed as merging in correctly) meant I had to revert to an early working state using `git reset --hard 0c9a77d`
@@ -11,6 +11,7 @@ Initial code for the website was taken from the boilerplate code that was alread
   5. Refresh browser
 ![Stylesheet issue fix](https://i.imgur.com/TeXNm9Y.png "Steps to fix stylesheet issue")
 * Although Validator warns of following: `Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.`. After a discussion with Fania, she mentioned it would be best of ignoring this error.
+* Only real project i have worked on is the iSAMS project. The rest are just placeholders and included for the purpose of this assignment.
 
 # References
 * Body Grid layout for overall webpage was adapted from my Lab 6 work
