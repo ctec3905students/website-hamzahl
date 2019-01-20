@@ -4,6 +4,11 @@
 
 /* and above unless overwritten below */
 
+/* Add smooth scrolling to entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: rgb(236, 236, 236);
   box-sizing: border-box;
@@ -181,6 +186,26 @@ section {
   text-transform: uppercase;
 }
 
+.btn-scroll {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  padding: .2em;
+  right: 2em;
+  bottom: 1em;
+  cursor: pointer;
+  opacity: .3;
+  transition: opacity 1s;
+}
+
+.btn-scroll:hover {
+  opacity: 1;
+}
+
+.fa-arrow-up {
+  font-size: 2.5em;
+}
+
 /* Animations */
 @keyframes fade-in {
   from {
@@ -241,6 +266,10 @@ section {
 
   .form-container textarea {
     height: 10rem;
+  }
+
+  .fa-arrow-up {
+    font-size: 3em;
   }
 }
 
