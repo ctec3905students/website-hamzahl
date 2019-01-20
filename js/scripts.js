@@ -105,10 +105,16 @@ const validateForm = () => {
 let nameStored = localStorage.getItem('name');
 let emailStored = localStorage.getItem('email');
 const populateLocalStorageName = () => {
-  localStorage.setItem('name', userName.value);
+  if (!isEmpty(userName)){
+    console.log('name changed');
+    localStorage.setItem('name', userName.value);
+  }
 }
 const populateLocalStorageEmail = () => {
-  localStorage.setItem('email', userEmail.value);
+  if(!isEmpty(userEmail)){
+    console.log('emauk changed');
+    localStorage.setItem('email', userEmail.value);
+  }
 }
 
 const prePopulateForm = () => {
@@ -122,13 +128,14 @@ const prePopulateForm = () => {
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  prePopulateForm();
   validateForm();
   if (isEmpty(userName) || isEmpty(userEmail) || isEmpty(userEmail)) {
     alert('Form not submitted: Field is missing.');
   } else {
     alert('Form Submitted.');
   }
+  populateLocalStorageEmail();
+  populateLocalStorageName();
 });
 
 const greetUser = () => {
