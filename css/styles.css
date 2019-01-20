@@ -186,6 +186,15 @@ section {
   text-transform: uppercase;
 }
 
+.btn-scroll {
+  display: none;
+  position: fixed;
+  padding: 1em;
+  right: 5em;
+  bottom: 1em;
+  cursor: pointer;
+}
+
 /* Animations */
 @keyframes fade-in {
   from {
@@ -246,6 +255,10 @@ section {
 
   .form-container textarea {
     height: 10rem;
+  }
+
+  .btn-scroll {
+    padding: 1.4em;
   }
 }
 
