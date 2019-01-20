@@ -14,6 +14,7 @@ This assignment is centred around a Single Page Application and aims to act as a
 * Only real project i have worked on is the iSAMS project. The rest are just placeholders and included for the purpose of this assignment.
 * Attempted to use `<progress>` tags for the skill bars however some issues were being caused with webkit therefore this couldn't be used for the purpose of this assignment
 * The function `SetSkillBar()` was mainly used to display proficiency and avoid writing unmaintainable css for each div
+* Navbar doesn't need to be sticky because there's a scroll to top button that appears when navbar is gone.
 
 # References
 * Body Grid layout for overall webpage was adapted from my Lab 6 work
