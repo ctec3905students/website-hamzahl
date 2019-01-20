@@ -188,11 +188,16 @@ section {
 
 .btn-scroll {
   display: none;
+  z-index: 10;
   position: fixed;
-  padding: 1em;
-  right: 5em;
+  padding: .2em;
+  right: 2em;
   bottom: 1em;
   cursor: pointer;
+}
+
+.fa-arrow-up {
+  font-size: 2.5em;
 }
 
 /* Animations */
@@ -257,8 +262,8 @@ section {
     height: 10rem;
   }
 
-  .btn-scroll {
-    padding: 1.4em;
+  .fa-arrow-up {
+    font-size: 3em;
   }
 }
 
