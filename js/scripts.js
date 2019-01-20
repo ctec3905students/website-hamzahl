@@ -11,17 +11,14 @@ navToggle.addEventListener('click', () => {
   console.log('burger clicked');
 });
 
-window.onscroll = () => { scrollFunction();
-};
-
-function scrollFunction() {
-  // if 100px from top then only show scroll to top button
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+window.addEventListener('scroll', () => {
+  // if top of page is larger that 140px
+  if (document.documentElement.scrollTop > 140) {
     document.getElementById('scroll-top').style.display = "block";
   } else {
-    console.log('still at top');
+    document.getElementById('scroll-top').style.display = "none";
   }
-};
+});
 
 btnScrollTop.addEventListener('click', () => {
   window.scrollTo(0, 0);
