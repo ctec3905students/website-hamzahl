@@ -21,3 +21,13 @@ window.addEventListener('scroll', () => {
 btnScrollTop.addEventListener('click', () => {
   window.scrollTo(0, 0);
 });
+// Sets the width and background for the skill bars
+const setSkillBar = () => {
+  [...document.querySelectorAll('.skill-bar')].forEach((e) => {
+    // Set inner div to the % specified in span text
+    e.children[0].style.width = e.children[0].children[0].innerText;
+    e.children[0].style.backgroundColor = 'red';
+  });
+} 
+
+setSkillBar();
