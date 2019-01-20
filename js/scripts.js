@@ -129,7 +129,7 @@ const prePopulateForm = () => {
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   validateForm();
-  if (isEmpty(userName) || isEmpty(userEmail) || isEmpty(userEmail)) {
+  if (isEmpty(userName) || isEmpty(userEmail) || isEmpty(userMessage)) {
     alert('Form not submitted: Field is missing.');
   } else {
     alert('Form Submitted.');
