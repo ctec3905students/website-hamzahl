@@ -2,6 +2,7 @@
 
 const navToggle = document.getElementById('navbar-toggle');
 const nav = document.getElementById('nav-menu');
+const btnScrollTop = document.getElementById('scroll-top');
 
 navToggle.addEventListener('click', () => {
   nav.classList.toggle('active')
@@ -15,7 +16,7 @@ const setElementDisplay = (element, display) => {
 window.addEventListener('scroll', () => {
   // if top of page is larger that 140px
   if (document.documentElement.scrollTop > 140) {
-    setElementDisplay('scroll-top', 'block');
+    console.log(setElementDisplay('scroll-top', 'block'));
   } else {
     setElementDisplay('scroll-top', 'none');
   }
