@@ -57,33 +57,67 @@ const invalidateInput = (message, field) => {
   field.focus();
 }
 
-// else clauses aren't needed for this function
 const validateForm = () => {
   if (isEmpty(userName)) {
     invalidateInput('Please enter a name', userName);
   } else if (!isValidName(userName)) {
     invalidateInput('Named not valid. Try again.', userName);
+  } else {
+    populateLocalStorageName();
   }
 
   if (isEmpty(userEmail)) {
     invalidateInput('Please enter an email', userEmail)
   } else if (!isValidEmail(userEmail)) {
     invalidateInput('Email not valid. Try again.', userEmail);
+  } else {
+    populateLocalStorageEmail();
   }
 
+  // else not required for this if statement
   if (isEmpty(userMessage)) {
     invalidateInput('Please enter a message', userMessage);
   }
 }
 
+/*
+  Local Storage
+*/
+let nameStored = localStorage.getItem('name');
+const populateLocalStorageName = () => {
+  console.log('populate local storage name called');
+  localStorage.setItem('name', userName.value);
+}
+const populateLocalStorageEmail = () => {
+  console.log('populate local storage email called');
+  localStorage.setItem('email', userEmail.value);
+}
+
+
+const prePopulateForm = () => {
+  let emailStored = localStorage.getItem('email');
+  if (nameStored) {
+    console.log(nameStored);
+    userName.value = nameStored;
+  }
+  if (emailStored) {
+    console.log(nameStored);
+    userEmail.value = emailStored;
+  }
+}
+
+
+
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   validateForm();
   if (isEmpty(userName) || isEmpty(userEmail) || isEmpty(userEmail)) {
-    alert('Form not submitted: Input fields are empty.');
+    prePopulateForm();
+    alert('Form not submitted: Field is missing.');
   } else {
     alert('Form Submitted.');
   }
 });
 
+prePopulateForm();
 setSkillBar();
