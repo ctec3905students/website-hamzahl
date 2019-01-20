@@ -9,6 +9,10 @@ const userEmail = document.getElementById('user-email');
 const userMessage = document.getElementById('user-message');
 const contactForm = document.getElementById('contact-form');
 const userSpan = document.getElementById('your-name');
+const btnOpenModal = document.getElementById('btn-open-modal');
+const btnCloseModal = document.getElementById('btn-close-modal');
+const fortniteContainer = document.getElementById('fortnite-container');
+const fortniteModal = document.getElementById('fortnite-modal')
 
 navToggle.addEventListener('click', () => {
   nav.classList.toggle('active')
@@ -30,6 +34,7 @@ window.addEventListener('scroll', () => {
 btnScrollTop.addEventListener('click', () => {
   window.scrollTo(0, 0);
 });
+
 
 // Helper function that can be reused across multiple functions
 const setElementStyle = (element, styles) => {
@@ -133,6 +138,24 @@ const greetUser = () => {
     userSpan.innerText = ' stranger';
   }
 }
+
+/*
+  Fortnite Modal
+*/
+btnOpenModal.addEventListener('click', () => {
+  fortniteModal.showModal();
+});
+
+btnCloseModal.addEventListener('click', () => {
+  fortniteModal.close();
+});
+
+// click anywhere outside the modal to close it
+window.addEventListener('click', (e) => {
+  if (e.target == fortniteModal) {
+    fortniteModal.close();
+  }
+})
 
 
 greetUser();

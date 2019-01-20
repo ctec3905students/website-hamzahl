@@ -241,6 +241,11 @@ section {
   }
 }
 
+dialog {
+  z-index: 1;
+}
+
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
