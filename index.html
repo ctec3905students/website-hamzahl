@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>P15208408</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
 </head>
 
 <body class="grid">
@@ -38,7 +39,8 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p class="about-me">I'm a final year computer science student and aspiring web developer.
+      <p class="about-me"> Hi<span id="your-name"></span>! My names Hamzah.<br>
+        I'm a final year computer science student and aspiring web developer.
         I was lucky enough to spend a year working for a fantastic company called iSAMS that laid an amazing foundation
         for me. <br>
         I enjoy learning and experiencing new things. <br>
@@ -187,11 +189,13 @@
     </section>
     <section id="contact">
       <h2>Contact Me</h2>
-      <form id="contact-form" method="POST" action="#" class="form-container">
-        <label for="email">Enter Email address:</label>
-        <input type="text" id="email" class="input-box" placeholder="joe.bloggs@example.com">
-        <label for="message">Enter Message:</label>
-        <textarea id="message" class="input-box" placeholder="What would you like to say?" maxlength="500"></textarea>
+      <form id="contact-form" method="POST" action="" class="form-container">
+        <label for="user-name">What is your name?</label>
+        <input type="text" id="user-name" class="input-box" placeholder="Anything but Joe Bloggs please!">
+        <label for="user-email">Enter Email address:</label>
+        <input type="text" id="user-email" class="input-box" placeholder="your.email@example.com">
+        <label for="user-message">Enter Message:</label>
+        <textarea id="user-message" class="input-box" placeholder="What would you like to say?" maxlength="500"></textarea>
         <button type="submit">Submit</button>
       </form>
     </section>

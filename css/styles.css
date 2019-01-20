@@ -193,7 +193,7 @@ section {
 	padding: 0;
 }
 
-span {
+.skill-bar span{
   float: right;
 }
 
