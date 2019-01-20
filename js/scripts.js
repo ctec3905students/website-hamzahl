@@ -8,6 +8,7 @@ const userName = document.getElementById('user-name');
 const userEmail = document.getElementById('user-email');
 const userMessage = document.getElementById('user-message');
 const contactForm = document.getElementById('contact-form');
+const userSpan = document.getElementById('your-name');
 
 navToggle.addEventListener('click', () => {
   nav.classList.toggle('active')
@@ -93,7 +94,6 @@ const populateLocalStorageEmail = () => {
   localStorage.setItem('email', userEmail.value);
 }
 
-
 const prePopulateForm = () => {
   let emailStored = localStorage.getItem('email');
   if (nameStored) {
@@ -106,8 +106,6 @@ const prePopulateForm = () => {
   }
 }
 
-
-
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   validateForm();
@@ -119,5 +117,15 @@ contactForm.addEventListener('submit', (e) => {
   }
 });
 
+const greetUser = () => {
+  if (nameStored) {
+    userSpan.innerText = ` ${nameStored}`;
+  } else {
+    userSpan.innerHTML = 'stranger';
+  }
+}
+
+
+greetUser();
 prePopulateForm();
 setSkillBar();
