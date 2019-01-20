@@ -15,9 +15,11 @@ This assignment is centred around a Single Page Application and aims to act as a
 * Attempted to use `<progress>` tags for the skill bars however some issues were being caused with webkit therefore this couldn't be used for the purpose of this assignment
 * The function `SetSkillBar()` was mainly used to display proficiency and avoid writing unmaintainable css for each div
 * Navbar doesn't need to be sticky because there's a scroll to top button that appears when navbar is gone.
+* I always use `const` instead of `let` for variable declarations unless the variable needs to change. This is also practiced in industry.
 
 # References
 * Body Grid layout for overall webpage was adapted from my Lab 6 work
 * Projects layout was adapted from [here](https://getflywheel.com/layout/card-layout-css-grid-layout-how-to/)
 * Navbar was inspired through watching this [video](https://www.youtube.com/watch?v=gXkqy0b4M5g). The burger bar animation was derived entirely from "Dev Ed" however some prior knowledge was also used to for the JS toggle.
 * Scroll to top button was inspired via [this](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top)
+* The helper function for css styles was inspired from as I wasn't aware  Object.Assign could be used to set styles.[here](https://stackoverflow.com/questions/3968593/how-can-i-set-multiple-css-styles-in-javascript)
