@@ -108,9 +108,11 @@ const prePopulateForm = () => {
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  prePopulateForm();
+  // Update greet without reloading page
+  greetUser();
   validateForm();
   if (isEmpty(userName) || isEmpty(userEmail) || isEmpty(userEmail)) {
-    prePopulateForm();
     alert('Form not submitted: Field is missing.');
   } else {
     alert('Form Submitted.');
