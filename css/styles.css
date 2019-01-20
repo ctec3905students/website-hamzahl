@@ -182,6 +182,7 @@ section {
 }
 
 .skill-bar{
+  text-align: left;
 	background-color:grey;
 	margin:.5em;
 	padding: 0;
