@@ -109,8 +109,6 @@ const prePopulateForm = () => {
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   prePopulateForm();
-  // Update greet without reloading page
-  greetUser();
   validateForm();
   if (isEmpty(userName) || isEmpty(userEmail) || isEmpty(userEmail)) {
     alert('Form not submitted: Field is missing.');
@@ -121,7 +119,7 @@ contactForm.addEventListener('submit', (e) => {
 
 const greetUser = () => {
   if (nameStored) {
-    userSpan.innerText = ` ${nameStored}`;
+    userSpan.innerText = ` again ${nameStored}`;
   } else {
     userSpan.innerText = ' stranger';
   }
