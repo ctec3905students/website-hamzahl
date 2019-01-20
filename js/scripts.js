@@ -22,7 +22,6 @@ const setElementDisplay = (element, display) => {
 window.addEventListener('scroll', () => {
   // if top of page is larger that 140px
   if (document.documentElement.scrollTop > 140) {
-    console.log(setElementDisplay('scroll-top', 'block'));
   } else {
     setElementDisplay('scroll-top', 'none');
   }
@@ -101,21 +100,17 @@ const validateForm = () => {
 let nameStored = localStorage.getItem('name');
 let emailStored = localStorage.getItem('email');
 const populateLocalStorageName = () => {
-  console.log('populate local storage name called');
   localStorage.setItem('name', userName.value);
 }
 const populateLocalStorageEmail = () => {
-  console.log('populate local storage email called');
   localStorage.setItem('email', userEmail.value);
 }
 
 const prePopulateForm = () => {
   if (nameStored) {
-    console.log(nameStored);
     userName.value = nameStored;
   }
   if (emailStored) {
-    console.log(nameStored);
     userEmail.value = emailStored;
   }
 }
