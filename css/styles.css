@@ -181,6 +181,16 @@ section {
   text-transform: uppercase;
 }
 
+.skill-bar{
+	background-color:grey;
+	margin:.5em;
+	padding: 0;
+}
+
+span {
+  float: right;
+}
+
 /* Animations */
 @keyframes fade-in {
   from {
