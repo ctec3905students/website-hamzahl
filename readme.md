@@ -21,3 +21,4 @@ This assignment is centred around a Single Page Application and aims to act as a
 * Projects layout was adapted from [here](https://getflywheel.com/layout/card-layout-css-grid-layout-how-to/)
 * Navbar was inspired through watching this [video](https://www.youtube.com/watch?v=gXkqy0b4M5g). The burger bar animation was derived entirely from "Dev Ed" however some prior knowledge was also used to for the JS toggle.
 * Scroll to top button was inspired via [this](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top)
+* Localstorage was implemented with some help from [Daves solution](https://github.com/CTEC3905/js-local-storage-form/)
