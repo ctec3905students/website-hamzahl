@@ -121,7 +121,7 @@ const greetUser = () => {
   if (nameStored) {
     userSpan.innerText = ` ${nameStored}`;
   } else {
-    userSpan.innerHTML = 'stranger';
+    userSpan.innerText = ' stranger';
   }
 }
 
