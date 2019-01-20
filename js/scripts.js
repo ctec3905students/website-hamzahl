@@ -139,11 +139,37 @@ const greetUser = () => {
   }
 }
 
+/* 
+  Fortnite API
+*/
+const fortniteStats = () => {
+  const fortniteUsername = 'xHamzah'
+  const fortniteUserId = `https://fortnite-public-api.theapinetwork.com/prod09/users/id?username=${fortniteUsername}`
+  fetch(fortniteUserId)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      // second url is dependent on uid which is retreieved from the first url
+      let fortniteUserStats = `https://fortnite-public-api.theapinetwork.com/prod09/users/public/br_stats?user_id=${data.uid}&platform=pc`;
+      return fetch(fortniteUserStats);
+    }).then((response) => {
+      return response.json();
+    }).then((data) => {
+      document.getElementById('fortnite-kills').innerText = `Kills: ${data.totals.kills}`;
+      document.getElementById('fortnite-wins').innerText = `Wins: ${data.totals.wins}`;
+      document.getElementById('fortnite-matches').innerText = `Matches: ${data.totals.matchesplayed}`;
+      document.getElementById('fortnite-kd').innerText = `KD: ${data.totals.kd}`;
+    });
+  }
+
+
 /*
   Fortnite Modal
 */
 btnOpenModal.addEventListener('click', () => {
   fortniteModal.showModal();
+  fortniteStats();
 });
 
 btnCloseModal.addEventListener('click', () => {
