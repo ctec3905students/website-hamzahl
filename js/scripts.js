@@ -183,10 +183,11 @@ const fortniteStats = () => {
     }).then((response) => {
       return response.json();
     }).then((data) => {
-      document.getElementById('fortnite-kills').innerText = `Kills: ${data.totals.kills}`;
-      document.getElementById('fortnite-wins').innerText = `Wins: ${data.totals.wins}`;
-      document.getElementById('fortnite-matches').innerText = `Matches: ${data.totals.matchesplayed}`;
-      document.getElementById('fortnite-kd').innerText = `KD: ${data.totals.kd}`;
+      let elements = fortniteModal.querySelectorAll('span');
+      let results = [data.totals.kills, data.totals.wins, data.totals.matchesplayed, data.totals.kd];
+      elements.forEach((e, i) => {
+        e.innerText = `${results[i]}`;
+      })
     });
 }
 
