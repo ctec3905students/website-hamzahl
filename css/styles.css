@@ -29,12 +29,6 @@ body {
   font-family: 'Titillium Web', sans-serif;
   margin: 0;
   text-transform: uppercase;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
-}
-
-.snap-scroll {
-  scroll-snap-align: start;
 }
 
 .grid {
