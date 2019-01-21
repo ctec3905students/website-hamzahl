@@ -11,7 +11,8 @@
   --main-bg-color: #222629;
   --second-bg-color: #2a2f32;
   --main-accent-color: #a2f237;
-  --primary-text-color: #fff;
+  --main-text-color: #fff;
+  --secondary-text-color: rgb(178,182,181);
 }
 
 /* Add smooth scrolling to entire page */
@@ -37,9 +38,16 @@ body {
 }
 
 /*
-  Theme
+  Theme reused elements
 */
-
+a {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--main-accent-color);
+  border-bottom: 1px dotted var(--main-text-color);
+}
 
 /*
   Header section
@@ -53,7 +61,7 @@ header {
 }
 
 header h1 {
-  color: var(--primary-text-color);
+  color: var(--main-text-color);
 }
 
 /*
