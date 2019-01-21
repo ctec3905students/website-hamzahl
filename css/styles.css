@@ -11,6 +11,7 @@
   --main-bg-color: #222629;
   --second-bg-color: #2a2f32;
   --main-accent-color: #a2f237;
+  --primary-text-color: #fff;
 }
 
 /* Add smooth scrolling to entire page */
@@ -34,6 +35,12 @@ body {
     "nav"
     "content"
 }
+
+/*
+  Theme
+*/
+
+
 /*
   Header section
 */
@@ -43,6 +50,10 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--second-bg-color);
+}
+
+header h1 {
+  color: var(--primary-text-color);
 }
 
 /*
@@ -90,6 +101,7 @@ nav {
 
 .main-nav li {
   text-align: right;
+  text-decoration: none;
 }
 
 .active {
