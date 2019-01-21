@@ -13,6 +13,7 @@
   --main-accent-color: #a2f237;
   --main-text-color: #fff;
   --secondary-text-color: rgb(178,182,181);
+  --caption-text-color: #62656a;
 }
 
 /* Add smooth scrolling to entire page */
@@ -51,6 +52,10 @@ a:hover {
 h2,
 h3 {
   color: var(--secondary-text-color);
+}
+p,
+label{
+  color: var(--caption-text-color);
 }
 
 /*
