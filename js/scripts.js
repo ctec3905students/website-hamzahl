@@ -26,6 +26,7 @@ const setElementDisplay = (element, display) => {
 window.addEventListener('scroll', () => {
   // if top of page is larger that 140px
   if (document.documentElement.scrollTop > 140) {
+    setElementDisplay('scroll-top', 'block');
   } else {
     setElementDisplay('scroll-top', 'none');
   }
