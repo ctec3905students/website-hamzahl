@@ -25,3 +25,4 @@ This assignment is centred around a Single Page Application and aims to act as a
 * The helper function for css styles was inspired from as I wasn't aware  Object.Assign could be used to set styles.[here](https://stackoverflow.com/questions/3968593/how-can-i-set-multiple-css-styles-in-javascript)
 * Localstorage was implemented with some help from [Daves solution](https://github.com/CTEC3905/js-local-storage-form/)
 * Fortnite API was implemented myself using the API doc from [here](https://fortniteapi.com/)
+* Regex for isValid functions were generated [online](https://regexr.com/ ) and pasted in
