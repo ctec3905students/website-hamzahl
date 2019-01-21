@@ -5,13 +5,19 @@
 /* and above unless overwritten below */
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
+
+/*  Pseudo class for variable declarations */
+:root {
+  --main-bg-color: #222629;
+}
+
 /* Add smooth scrolling to entire page */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: rgb(236, 236, 236);
+  background: var(--main-bg-color);
   box-sizing: border-box;
   font-family: 'Titillium Web', sans-serif;
 }
