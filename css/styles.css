@@ -212,6 +212,9 @@ main {
   float: right;
 }
 
+/*
+  Contact section
+*/
 .form-container {
   display: flex;
   flex-direction: column;
@@ -220,10 +223,6 @@ main {
 
 .form-container label {
   margin: .3em 0 .1em 0;
-}
-
-.input-box {
-  padding: .5em;
 }
 
 .form-container input {
@@ -237,8 +236,6 @@ main {
   height: 6em;
   margin-bottom: .3em;
 }
-
-
 
 section {
   text-align: center;
