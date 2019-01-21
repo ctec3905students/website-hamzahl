@@ -99,18 +99,6 @@ nav {
   animation: slide-down 1s;
 }
 
-.nav-links {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-  font-size: 1.1em;
-  animation: fade-in 1s ease-in-out;
-}
-
-a.nav-links:hover {
-  color: blueviolet;
-}
-
 main {
   grid-area: content;
 }
