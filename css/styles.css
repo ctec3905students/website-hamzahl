@@ -305,7 +305,18 @@ section h2 {
   font-size: 3em;
 }
 
-
+/*
+  on scroll functionality
+*/
+section, 
+header, 
+nav {
+  opacity: 0;
+  transition: opacity 3s;
+}
+.inview {
+  opacity: 1;
+}
 /* Animations */
 @keyframes fade-in {
   from {

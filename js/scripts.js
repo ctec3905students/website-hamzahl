@@ -214,7 +214,30 @@ window.addEventListener('click', (e) => {
   }
 });
 
+/*
+  Fade in on load
+*/
+const inView = (e) => {
+  let sb = document.documentElement.getBoundingClientRect();
+  let eb = e.getBoundingClientRect();
+  return !((eb.top + eb.height < 0) || (eb.top > sb.height));
+}
+
+const updateInView = () => {
+  let elements = document.querySelectorAll('section, header, nav');
+  elements.forEach((e) => {
+    if (inView(e)){
+      e.classList.add('inview');
+    } else {
+      e.classList.remove('inview');
+    }
+    });
+}
+
+document.body.onscroll = updateInView;
+
 // function calls
+updateInView();
 greetUser();
 prePopulateForm();
 setSkillBar();
