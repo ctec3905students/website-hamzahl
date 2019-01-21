@@ -6,6 +6,9 @@ This assignment is centred around a Single Page Application and aims to act as a
 * The function `SetSkillBar()` was mainly used to display proficiency and avoid writing unmaintainable css for each div
 * Navbar doesn't need to be sticky because there's a scroll to top button that appears when navbar is gone.
 
+#### Usage of ul and li within nav
+* I believe this is something that can be argued as acceptable. By using ul and li I was provided with greater control over my bar nav. Further justification can be found [on this stackover flow page](https://stackoverflow.com/questions/9600357/should-i-be-using-nav-or-ul)
+
 #### Fake projects
  * Only real project i have worked on is the iSAMS project. The rest are just placeholders and included for the purpose of this assignment.
 
