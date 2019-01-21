@@ -11,7 +11,6 @@ const contactForm = document.getElementById('contact-form');
 const userSpan = document.getElementById('your-name');
 const btnOpenModal = document.getElementById('btn-open-modal');
 const btnCloseModal = document.getElementById('btn-close-modal');
-const fortniteContainer = document.getElementById('fortnite-container');
 const fortniteModal = document.getElementById('fortnite-modal')
 
 navToggle.addEventListener('click', () => {
