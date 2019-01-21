@@ -42,13 +42,20 @@ const setElementStyle = (element, styles) => {
   Object.assign(element.style, styles);
 }
 
+// Helper function to get the CSS variables
+const getCssVariable = (cssVariable) => {
+  return getComputedStyle(document.body).getPropertyValue(cssVariable);
+}
+
 // Sets the width and background for the skill bars
 const setSkillBar = () => {
   [...document.querySelectorAll('.skill-bar')].forEach((e) => {
     const innerSkillBar = e.children[0];
     const innerSkillBarSpan = innerSkillBar.children[0];
     const styles = {
-      backgroundColor: 'red',
+      backgroundColor: getCssVariable('--second-accent-color'),
+      color: getCssVariable('--main-text-color'),
+      padding: '.2em',
       width: innerSkillBarSpan.innerText
     };
 

@@ -3,6 +3,20 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 
 /* and above unless overwritten below */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+
+/*  Pseudo class for variable declarations */
+:root {
+  --main-bg-color: #222629;
+  --second-bg-color: #1a1d20;
+  --third-bg-color: #222629;
+  --main-accent-color: #a2f237;
+  --second-accent-color: #618930;
+  --main-text-color: #fff;
+  --secondary-text-color: #b2b6b5;
+  --caption-text-color: #62656a;
+}
 
 /* Add smooth scrolling to entire page */
 html {
@@ -10,8 +24,11 @@ html {
 }
 
 body {
-  background: rgb(236, 236, 236);
+  background: var(--main-bg-color);
   box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  text-transform: uppercase;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
 }
@@ -29,106 +46,75 @@ body {
     "content"
 }
 
+/*
+  Theme reused elements
+*/
+a {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-accent-color);
+  border-bottom: 1px dotted var(--main-text-color);
+}
+
+h2,
+h3 {
+  color: var(--secondary-text-color);
+}
+
+p,
+label {
+  color: var(--caption-text-color);
+}
+
+button {
+  background-color: var(--main-accent-color);
+  color: var(--caption-text-color);
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--second-accent-color);
+  color: var(--main-text-color);
+}
+
+input,
+textarea {
+  padding: 1em;
+  border: 1px solid var(--caption-text-color);
+  outline: none;
+  background-color: var(--second-bg-color);
+  color: var(--main-text-color);
+  text-align: left;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--main-accent-color);
+} 
+
+/*
+  Header section
+*/
 header {
   grid-area: head;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--second-bg-color);
 }
 
-nav {
-  grid-area: nav;
+header h1 {
+  color: var(--main-text-color);
 }
 
-.main-nav {
-  list-style-type: none;
-  border-bottom: 1px solid red;
-  display: none;
-}
-
-.main-nav li {
-  text-align: right;
-}
-
-.nav-links {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-  font-size: 1.1em;
-  animation: fade-in 1s ease-in-out;
-}
-
-a.nav-links:hover {
-  color: blueviolet;
-}
-
-main {
-  grid-area: content;
-}
-
-.inner-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: auto;
-  grid-gap: 1rem;
-}
-
-.project {
-  border: 1px solid #050404;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.project-image {
-  width: 100%;
-}
-
-.project-details {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.project-details a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(170, 10, 10);
-}
-
-.skill {
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.form-container label {
-  margin: .3em 0 .1em 0;
-}
-
-.input-box {
-  padding: .5em;
-}
-
-.form-container input {
-  background-color: white;
-  text-align: left;
-}
-
-.form-container textarea {
-  /* removes users ability to resize the textarea */
-  resize: none;
-  height: 6em;
-  margin-bottom: .3em;
-}
-
+/*
+  Burger bar
+*/
 .burger {
   display: flex;
   flex-direction: column;
@@ -141,8 +127,12 @@ main {
   width: 25px;
   height: 3px;
   margin: 2.5px;
-  background-color: red;
+  background-color: var(--main-accent-color);
   transition: all .25s ease-in;
+}
+
+.burger div:hover {
+  background-color: var(--second-accent-color);
 }
 
 .toggle .line1 {
@@ -157,6 +147,23 @@ main {
   transform: rotate(-45deg) translate(0px, -11px)
 }
 
+/* 
+  Nav Section 
+*/
+nav {
+  grid-area: nav;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.main-nav li {
+  text-align: right;
+  text-decoration: none;
+}
+
 .active {
   display: flex;
   flex-direction: column;
@@ -164,12 +171,40 @@ main {
   animation: slide-down 1s;
 }
 
-section {
-  text-align: center;
+/*
+  Main section
+*/
+main {
+  grid-area: content;
+  padding: 1em;
 }
 
-.about-me {
-  line-height: 1.8;
+.inner-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
+
+/*
+  Project section
+*/
+.project {
+  border: 1px dotted var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-image img {
@@ -188,13 +223,21 @@ section {
   top: 7.5em;
   left: 0;
   padding: .5em;
-  background-color: #ff4842;
-  text-transform: uppercase;
+  background-color: var(--second-accent-color);
+  color: var(--main-text-color);
+}
+
+/*
+  Skill section
+*/
+.skill {
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-bar {
   text-align: left;
-  background-color: grey;
+  border-bottom: 1px white solid;
   margin: .5em;
   padding: 0;
 }
@@ -203,24 +246,54 @@ section {
   float: right;
 }
 
+/*
+  Contact section
+*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.form-container label {
+  margin: .5em 0 .1em 0;
+}
+
+.form-container textarea {
+  resize: none;
+  margin-bottom: 1em;
+  height: 10em;
+}
+
+section {
+  text-align: center;
+}
+
+.about-me {
+  line-height: 1.8;
+}
+
+/*
+  Scroll to top
+*/
 .btn-scroll {
   display: none;
-  z-index: 10;
+  z-index: 100;
   position: fixed;
-  padding: .2em;
+  padding: 0;
   right: 2em;
   bottom: 1em;
   cursor: pointer;
+  background: transparent;
   opacity: .3;
-  transition: opacity 1s;
 }
 
 .btn-scroll:hover {
+  background: transparent;
   opacity: 1;
 }
 
 .fa-arrow-up {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 
@@ -250,17 +323,23 @@ section {
 dialog {
   z-index: 1;
   position: fixed;
+  border: 1px solid var(--main-accent-color);
+  background-color: var(--second-bg-color);
+}
+
+dialog h1 {
+  color: var(--main-text-color);
 }
 
 .close {
   color: lightgray;
   font-size: 1.4em;
+  padding: .1em;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -295,17 +374,13 @@ dialog {
     flex-direction: column;
     align-items: center;
   }
-
-  .input-box {
-    width: 60%;
-  }
-
   .form-container textarea {
-    height: 10rem;
+    height: 20em;
   }
 
-  .fa-arrow-up {
-    font-size: 3em;
+  input,
+  textarea {
+    width: 60%;
   }
 }
 
@@ -321,7 +396,9 @@ dialog {
     grid-gap: 1rem;
   }
 
-  .input-box {
+  input,
+  textarea {
     width: 55em;
   }
+
 }
