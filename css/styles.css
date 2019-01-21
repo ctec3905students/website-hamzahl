@@ -41,6 +41,7 @@ body {
   grid-template-areas: "head"
     "nav"
     "content"
+    "footer"
 }
 
 /*
@@ -192,6 +193,28 @@ section {
 
 section h2 {
   border-bottom: solid 1px var(--main-accent-color);
+}
+
+/* 
+  Footer Section
+*/
+footer {
+  grid-area: footer;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  background-color: var(--second-bg-color);
+}
+
+footer a{
+  margin-left: 1em;
+  margin-right: 1em;
+  transition: transform 1s;
+}
+
+footer a:hover {
+  transform: scale(2);
+  border-bottom: none;
 }
 
 /*
