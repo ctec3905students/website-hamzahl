@@ -160,7 +160,11 @@ contactForm.addEventListener('submit', (e) => {
 const userSpan = document.getElementById('your-name');
 const greetUser = () => {
   if (nameStored) {
-    userSpan.innerText = ` again ${nameStored}`;
+    let styles = {
+      'color' : getCssVariable('--main-text-color')
+    };
+    setElementStyle(userSpan,styles);
+    userSpan.innerText = ` ${nameStored}!`;
   } else {
     userSpan.innerText = ' stranger';
   }
