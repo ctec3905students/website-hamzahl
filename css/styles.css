@@ -125,6 +125,10 @@ header h1 {
   transition: all .25s ease-in;
 }
 
+.burger div:hover {
+  background-color: var(--second-accent-color);
+}
+
 .toggle .line1 {
   transform: rotate(45deg) translate(0px, 11px);
 }
