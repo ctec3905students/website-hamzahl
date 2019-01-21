@@ -10,6 +10,7 @@
 :root {
   --main-bg-color: #222629;
   --second-bg-color: #2a2f32;
+  --main-accent-color: #a2f237;
 }
 
 /* Add smooth scrolling to entire page */
@@ -44,6 +45,40 @@ header {
   background-color: var(--second-bg-color);
 }
 
+/*
+  Burger bar
+*/
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  cursor: pointer;
+  animation: fade-in 1s ease-in-out;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 2.5px;
+  background-color: var(--main-accent-color);
+  transition: all .25s ease-in;
+}
+
+.toggle .line1 {
+  transform: rotate(45deg) translate(0px, 11px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg) translate(0px, -11px)
+}
+
+/* 
+  Nav Section 
+*/
 nav {
   grid-area: nav;
 }
@@ -56,6 +91,13 @@ nav {
 
 .main-nav li {
   text-align: right;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  animation: slide-down 1s;
 }
 
 .nav-links {
@@ -137,40 +179,7 @@ main {
   margin-bottom: .3em;
 }
 
-.burger {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  cursor: pointer;
-  animation: fade-in 1s ease-in-out;
-}
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  margin: 2.5px;
-  background-color: red;
-  transition: all .25s ease-in;
-}
-
-.toggle .line1 {
-  transform: rotate(45deg) translate(0px, 11px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotate(-45deg) translate(0px, -11px)
-}
-
-.active {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  animation: slide-down 1s;
-}
 
 section {
   text-align: center;
