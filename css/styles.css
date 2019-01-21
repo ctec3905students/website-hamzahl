@@ -9,6 +9,7 @@
 /*  Pseudo class for variable declarations */
 :root {
   --main-bg-color: #222629;
+  --second-bg-color: #2a2f32;
 }
 
 /* Add smooth scrolling to entire page */
@@ -30,12 +31,15 @@ body {
     "nav"
     "content"
 }
-
+/*
+  Header section
+*/
 header {
   grid-area: head;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--second-bg-color);
 }
 
 nav {
