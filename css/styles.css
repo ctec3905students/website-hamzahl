@@ -11,6 +11,7 @@
   --main-bg-color: #222629;
   --second-bg-color: #2a2f32;
   --main-accent-color: #a2f237;
+  --second-accent-color:#618930; 
   --main-text-color: #fff;
   --secondary-text-color: #b2b6b5;
   --caption-text-color: #62656a;
@@ -56,6 +57,17 @@ h3 {
 p,
 label{
   color: var(--caption-text-color);
+}
+button {
+  background-color: var(--main-accent-color);
+  color: var(--caption-text-color);
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+button:hover{
+  background-color: var(--second-accent-color);
+  color: var(--main-text-color);
 }
 
 /*
