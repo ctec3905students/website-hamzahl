@@ -178,7 +178,7 @@ const fortniteStats = () => {
     })
     .then((data) => {
       // second url is dependent on uid which is retreieved from the first url
-      let fortniteUserStats = `https://fortnite-public-api.theapinetwork.com/prod09/users/public/br_stats?user_id=${data.uid}&platform=pc`;
+      let fortniteUserStats = `https://fortnite-public-api.theapinetwork.com/prod09/users/public/br_stats?user_id=${data.uid}&platform=ps4`;
       return fetch(fortniteUserStats);
     }).then((response) => {
       return response.json();
