@@ -18,6 +18,9 @@ This assignment is centred around a Single Page Application and aims to act as a
 #### Const usage
 * I general always use `const` instead of `let` for variable declarations I feel the variable needs to change. This is also practiced in industry.
 
+#### API 
+* Ideally wanted to use a social networks API however most required oauth authentication. Therefore, I decided to use Fortnite API to show off my awful stats!
+
 # Validator 
 #### HTML
 * I believe the below warning can be ignored as the purpose of this assignment is to utilise semantic elements. I could easily switch this to a div but opted for the semantic element as it works in google chrome. See below:
