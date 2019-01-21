@@ -11,7 +11,7 @@
 </head>
 
 <body class="grid">
-  <header>
+  <header class="snap-scroll">
     <h1>Hamzah Lorgat</h1>
     <!-- https://codepen.io/designcouch/pen/Atyop -->
     <div class="burger" id="navbar-toggle">
@@ -37,7 +37,7 @@
     </ul>
   </nav>
   <main>
-    <section id="about">
+    <section id="about" class="snap-scroll">
       <h2>About Me</h2>
       <p class="about-me"> Hi<span id="your-name"></span>! My names Hamzah.<br>
         I'm a final year computer science student and aspiring web developer.
@@ -47,16 +47,16 @@
         In my spare time I'm either following Manchester United around the country or on the computer. <br>
       </p>
       <button id="btn-open-modal">View Fortnite Stats</button>
-      <dialog id ="fortnite-modal">
-          <h1 id ="fortnite-kills"></h1>
-          <h1 id ="fortnite-wins"></h1>
-          <h1 id ="fortnite-matches"></h1>
-          <h1 id ="fortnite-kd"></h1>
+      <dialog id="fortnite-modal">
+        <h1 id="fortnite-kills"></h1>
+        <h1 id="fortnite-wins"></h1>
+        <h1 id="fortnite-matches"></h1>
+        <h1 id="fortnite-kd"></h1>
         <button id="btn-close-modal" class="close"><i class="fas fa-times close"></i></button>
       </dialog>
     </section>
     <h2>Projects</h2>
-    <section id="projects" class="inner-grid">
+    <section id="projects" class="inner-grid snap-scroll">
       <article class="project">
         <picture class="project-image">
           <img src="./images/projects/isams_gdpr.jpeg" alt="Screemshot of iSAMS project">
@@ -109,7 +109,7 @@
       </article>
     </section>
     <h2>Skills</h2>
-    <section id="skills" class="inner-grid">
+    <section id="skills" class="inner-grid snap-scroll">
       <article class="skill">
         <h3>Front End</h3>
         <div class="skill-bar">
@@ -195,7 +195,7 @@
         </div>
       </article>
     </section>
-    <section id="contact">
+    <section id="contact" class="snap-scroll">
       <h2>Contact Me</h2>
       <form id="contact-form" method="POST" action="#" class="form-container">
         <label for="user-name">What is your name?</label>

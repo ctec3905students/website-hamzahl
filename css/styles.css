@@ -12,6 +12,12 @@ html {
 body {
   background: rgb(236, 236, 236);
   box-sizing: border-box;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+
+.snap-scroll {
+  scroll-snap-align: start;
 }
 
 .grid {
@@ -82,13 +88,13 @@ main {
 .project-details {
   display: flex;
   flex-direction: column;
-  flex: 1; 
+  flex: 1;
 }
 
 .project-details a {
   text-transform: uppercase;
   text-decoration: none;
-  color:rgb(170, 10, 10);
+  color: rgb(170, 10, 10);
 }
 
 .skill {
@@ -166,7 +172,7 @@ section {
   line-height: 1.8;
 }
 
-.project-image img{
+.project-image img {
   height: 10em;
   width: 100%;
   opacity: .35;
@@ -186,14 +192,14 @@ section {
   text-transform: uppercase;
 }
 
-.skill-bar{
+.skill-bar {
   text-align: left;
-	background-color:grey;
-	margin:.5em;
-	padding: 0;
+  background-color: grey;
+  margin: .5em;
+  padding: 0;
 }
 
-.skill-bar span{
+.skill-bar span {
   float: right;
 }
 
