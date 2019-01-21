@@ -169,12 +169,6 @@ main {
   flex: 1; 
 }
 
-.project-details a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color:rgb(170, 10, 10);
-}
-
 .skill {
   border: 2px solid black;
   display: flex;
