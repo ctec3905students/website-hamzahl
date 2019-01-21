@@ -18,6 +18,15 @@ This assignment is centred around a Single Page Application and aims to act as a
 #### Const usage
 * I general always use `const` instead of `let` for variable declarations I feel the variable needs to change. This is also practiced in industry.
 
+# Validator 
+#### HTML
+* I believe the below warning can be ignored as the purpose of this assignment is to utilise semantic elements. I could easily switch this to a div but opted for the semantic element as it works in google chrome. See below:
+`Warning: The dialog element is not supported in all browsers. Please be sure to test, and consider using a polyfill.`
+
+#### CSS
+* The below error may appear depending what version of the css validator is being used. A bug exists on the [main validator](https://jigsaw.w3.org/css-validator/) which causes CSS3 Variables to throw an error. This issue was fixed in their [beta validator](https://validator.w3.org/nu/). Error below is not displayed on latest validator:
+`Parse Error --main-bg-color: #222629;`
+
 # Bugs
 #### Stylesheet not appearing (Only occurred once)
 * An issue arose on GitHub Pages and local instance following `commit 4361730 (Merge branch 'feature/navigation')`. It would appear as the previous stylesheet was being cached. This can be resolved by the following :
