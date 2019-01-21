@@ -169,6 +169,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-right: 1em;
   animation: slide-down 1s;
 }
 
