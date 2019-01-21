@@ -48,6 +48,10 @@ a:hover {
   color: var(--main-accent-color);
   border-bottom: 1px dotted var(--main-text-color);
 }
+h2,
+h3 {
+  color: var(--secondary-text-color);
+}
 
 /*
   Header section
