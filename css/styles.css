@@ -262,25 +262,28 @@ section {
   line-height: 1.8;
 }
 
-
+/*
+  Scroll to top
+*/
 .btn-scroll {
-  display: none;
-  z-index: 10;
+  display: block;
+  z-index: 100;
   position: fixed;
-  padding: .2em;
+  padding: 0;
   right: 2em;
   bottom: 1em;
   cursor: pointer;
+  background: transparent;
   opacity: .3;
-  transition: opacity 1s;
 }
 
 .btn-scroll:hover {
+  background: transparent;
   opacity: 1;
 }
 
 .fa-arrow-up {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 
@@ -362,10 +365,6 @@ dialog {
   input,
   textarea {
     width: 60%;
-  }
-
-  .fa-arrow-up {
-    font-size: 3em;
   }
 }
 
