@@ -24,6 +24,8 @@ This assignment is centred around a Single Page Application and aims to act as a
   4. Scroll down and click Clear site data
   5. Refresh browser
 ![Stylesheet issue fix](https://i.imgur.com/TeXNm9Y.png "Steps to fix stylesheet issue")
+### Snap scrolling bug on iPhone 6s Chrome
+* Removed snap scrolling for now due to causing a negative impact on user experience
 
 # References
 * Body Grid layout for overall webpage was adapted from my Lab 6 work
