@@ -161,9 +161,9 @@ const userSpan = document.getElementById('your-name');
 const greetUser = () => {
   if (nameStored) {
     let styles = {
-      'color' : getCssVariable('--main-text-color')
+      'color': getCssVariable('--main-text-color')
     };
-    setElementStyle(userSpan,styles);
+    setElementStyle(userSpan, styles);
     userSpan.innerText = ` ${nameStored}!`;
   } else {
     userSpan.innerText = ' stranger';
@@ -230,12 +230,12 @@ const inView = (e) => {
 const updateInView = () => {
   let elements = document.querySelectorAll('section, header, nav');
   elements.forEach((e) => {
-    if (inView(e)){
+    if (inView(e)) {
       e.classList.add('inview');
     } else {
       e.classList.remove('inview');
     }
-    });
+  });
 }
 
 document.body.onscroll = updateInView;
