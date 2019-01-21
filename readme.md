@@ -37,3 +37,4 @@ This assignment is centred around a Single Page Application and aims to act as a
 * Fortnite API was implemented myself using the API doc from [here](https://fortniteapi.com/)
 * Regex for isValid functions were generated [online](https://regexr.com/) and pasted in
 * Fade in on load section of Javascript was adapted from [Stack Overflow](https://stackoverflow.com/questions/46437376/element-fade-in-on-scroll-pure-vanilla-javascript)
+* Box-shadow was taken from material design [codepen](https://codepen.io/sdthornton/pen/wBZdXq)
