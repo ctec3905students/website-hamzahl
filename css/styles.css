@@ -204,6 +204,7 @@ main {
 }
 .skill-bar{
   text-align: left;
+  border-bottom: 1px white solid;
 	margin:.5em;
 	padding: 0;
 }
