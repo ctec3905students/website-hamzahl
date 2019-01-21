@@ -1,68 +1,23 @@
 'use strict';
 
-// Element IDs
-const navToggle = document.getElementById('navbar-toggle');
-const nav = document.getElementById('nav-menu');
-const btnScrollTop = document.getElementById('scroll-top');
-const userName = document.getElementById('user-name');
-const userEmail = document.getElementById('user-email');
-const userMessage = document.getElementById('user-message');
-const contactForm = document.getElementById('contact-form');
-const userSpan = document.getElementById('your-name');
-const btnOpenModal = document.getElementById('btn-open-modal');
-const btnCloseModal = document.getElementById('btn-close-modal');
-const fortniteModal = document.getElementById('fortnite-modal')
-
-navToggle.addEventListener('click', () => {
-  nav.classList.toggle('active')
-  navToggle.classList.toggle('toggle');
-});
-
+/* 
+  Helper Functions
+*/
 const setElementDisplay = (element, display) => {
   document.getElementById(element).style.display = display;
 }
 
-window.addEventListener('scroll', () => {
-  // if top of page is larger that 140px
-  if (document.documentElement.scrollTop > 140) {
-    setElementDisplay('scroll-top', 'block');
-  } else {
-    setElementDisplay('scroll-top', 'none');
-  }
-});
-
-btnScrollTop.addEventListener('click', () => {
-  window.scrollTo(0, 0);
-});
-
-
-// Helper function that can be reused across multiple functions
 const setElementStyle = (element, styles) => {
   Object.assign(element.style, styles);
 }
 
-// Helper function to get the CSS variables
 const getCssVariable = (cssVariable) => {
   return getComputedStyle(document.body).getPropertyValue(cssVariable);
 }
 
-// Sets the width and background for the skill bars
-const setSkillBar = () => {
-  [...document.querySelectorAll('.skill-bar')].forEach((e) => {
-    const innerSkillBar = e.children[0];
-    const innerSkillBarSpan = innerSkillBar.children[0];
-    const styles = {
-      backgroundColor: getCssVariable('--second-accent-color'),
-      color: getCssVariable('--main-text-color'),
-      padding: '.2em',
-      width: innerSkillBarSpan.innerText
-    };
-
-    setElementStyle(innerSkillBar, styles);
-  });
-}
-
-// Validation methods for form
+/*
+  Validation Helper Functions
+*/
 const isEmpty = (inputField) => {
   return (inputField.value === '' ? true : false);
 }
@@ -82,6 +37,86 @@ const invalidateInput = (message, field) => {
   field.value = '';
   field.focus();
 }
+
+/*
+  Navbar toggle feature for mobile screens
+*/
+const navToggle = document.getElementById('navbar-toggle');
+const nav = document.getElementById('nav-menu');
+
+navToggle.addEventListener('click', () => {
+  nav.classList.toggle('active')
+  navToggle.classList.toggle('toggle');
+});
+
+/* 
+  Scroll to top feature
+*/
+const btnScrollTop = document.getElementById('scroll-top');
+window.addEventListener('scroll', () => {
+  // if top of page is more that 140px
+  if (document.documentElement.scrollTop > 140) {
+    setElementDisplay('scroll-top', 'block');
+  } else {
+    setElementDisplay('scroll-top', 'none');
+  }
+});
+
+btnScrollTop.addEventListener('click', () => {
+  window.scrollTo(0, 0);
+});
+
+/* 
+  Set Skill progres bar
+*/
+const setSkillBar = () => {
+  [...document.querySelectorAll('.skill-bar')].forEach((e) => {
+    const innerSkillBar = e.children[0];
+    const innerSkillBarSpan = innerSkillBar.children[0];
+    const styles = {
+      backgroundColor: getCssVariable('--second-accent-color'),
+      color: getCssVariable('--main-text-color'),
+      padding: '.2em',
+      width: innerSkillBarSpan.innerText
+    };
+    setElementStyle(innerSkillBar, styles);
+  });
+}
+
+/*
+  Local Storage
+*/
+const userName = document.getElementById('user-name');
+const userEmail = document.getElementById('user-email');
+let nameStored = localStorage.getItem('name');
+let emailStored = localStorage.getItem('email');
+const populateLocalStorageName = () => {
+  if (!isEmpty(userName)) {
+    console.log('name changed');
+    localStorage.setItem('name', userName.value);
+  }
+}
+const populateLocalStorageEmail = () => {
+  if (!isEmpty(userEmail)) {
+    console.log('emauk changed');
+    localStorage.setItem('email', userEmail.value);
+  }
+}
+
+const prePopulateForm = () => {
+  if (nameStored) {
+    userName.value = nameStored;
+  }
+  if (emailStored) {
+    userEmail.value = emailStored;
+  }
+}
+
+/* 
+  Contact Form 
+*/
+const contactForm = document.getElementById('contact-form');
+const userMessage = document.getElementById('user-message');
 
 const validateForm = () => {
   if (isEmpty(userName)) {
@@ -106,32 +141,6 @@ const validateForm = () => {
   }
 }
 
-/*
-  Local Storage
-*/
-let nameStored = localStorage.getItem('name');
-let emailStored = localStorage.getItem('email');
-const populateLocalStorageName = () => {
-  if (!isEmpty(userName)){
-    console.log('name changed');
-    localStorage.setItem('name', userName.value);
-  }
-}
-const populateLocalStorageEmail = () => {
-  if(!isEmpty(userEmail)){
-    console.log('emauk changed');
-    localStorage.setItem('email', userEmail.value);
-  }
-}
-
-const prePopulateForm = () => {
-  if (nameStored) {
-    userName.value = nameStored;
-  }
-  if (emailStored) {
-    userEmail.value = emailStored;
-  }
-}
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -145,6 +154,10 @@ contactForm.addEventListener('submit', (e) => {
   populateLocalStorageName();
 });
 
+/*
+  Greet user in about me section
+*/
+const userSpan = document.getElementById('your-name');
 const greetUser = () => {
   if (nameStored) {
     userSpan.innerText = ` again ${nameStored}`;
@@ -175,12 +188,15 @@ const fortniteStats = () => {
       document.getElementById('fortnite-matches').innerText = `Matches: ${data.totals.matchesplayed}`;
       document.getElementById('fortnite-kd').innerText = `KD: ${data.totals.kd}`;
     });
-  }
-
+}
 
 /*
   Fortnite Modal
 */
+const btnOpenModal = document.getElementById('btn-open-modal');
+const btnCloseModal = document.getElementById('btn-close-modal');
+const fortniteModal = document.getElementById('fortnite-modal');
+
 btnOpenModal.addEventListener('click', () => {
   fortniteModal.showModal();
   fortniteStats();
@@ -195,9 +211,9 @@ window.addEventListener('click', (e) => {
   if (e.target == fortniteModal) {
     fortniteModal.close();
   }
-})
+});
 
-
+// function calls
 greetUser();
 prePopulateForm();
 setSkillBar();
