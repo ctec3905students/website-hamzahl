@@ -217,6 +217,7 @@ footer a:hover {
   border-bottom: none;
 }
 
+
 /*
   About Section
 */
@@ -434,6 +435,13 @@ dialog h1 {
   textarea {
     width: 60%;
   }
+
+.fa-github,
+.fa-twitter,
+.fa-facebook,
+.fa-instagram {
+  font-size: 1.5em;
+}
 }
 
 /* DESKTOP STYLES */
