@@ -48,21 +48,22 @@
       </p>
       <button id="btn-open-modal">View Fortnite Stats</button>
       <dialog id="fortnite-modal">
-        <h1 id="fortnite-kills"></h1>
-        <h1 id="fortnite-wins"></h1>
-        <h1 id="fortnite-matches"></h1>
-        <h1 id="fortnite-kd"></h1>
+        <h2>Kills: <span id="fortnite-stat-kills"></span></h2>
+        <h2>Wins: <span id="fortnite-stat-wins"></span></h2>
+        <h2>Matches: <span id="fortnite-stat-matches"></span></h2>
+        <h2>Kd: <span id="fortnite-stat-kd"></span></h2>
         <button id="btn-close-modal" class="close"><i class="fas fa-times close"></i></button>
       </dialog>
     </section>
-    <h2>Projects</h2>
-    <section id="projects" class="inner-grid snap-scroll">
+    <section id="projects" class="snap-scroll">
+        <h2>Projects</h2>
+      <div class="inner-grid">
       <article class="project">
         <picture class="project-image">
           <img src="./images/projects/isams_gdpr.jpeg" alt="Screemshot of iSAMS project">
         </picture>
         <div class="project-details">
-          <p class="project-name">iSAMS</p>
+          <h4 class="project-name">iSAMS</h4>
           <p>Worked on the Data Protection module of the system to allow schools to
             manage their GDPR responsibilites.<br>
             Worked with C#, Dapper, EF, Polymer, Redux, TypeScript</p>
@@ -74,7 +75,7 @@
           <img src="./images/projects/facebook.png" alt="Screenshot of Facebook project">
         </picture>
         <div class="project-details">
-          <p class="project-name">Facebook</p>
+          <h4 class="project-name">Facebook</h4>
           <p>Developed a Social network to facilitate communication and improve connectivity between university
             students.<br>
             Worked with PHP, mySQL, JavaScript, React</p>
@@ -86,7 +87,7 @@
           <img src="./images/projects/amazon.png" alt="Screenshot of Amazon project">
         </picture>
         <div class="project-details">
-          <p class="project-name">Amazon</p>
+          <h4 class="project-name">Amazon</h4>
           <p>Worked on an E-commerce solution to allow sellers to list their products on the largest online
             marketplace. <br>
             Worked with C#, Java, JavaScript, Bootstrap</p>
@@ -98,7 +99,7 @@
           <img src="./images/projects/google.png" alt="Picture of project">
         </picture>
         <div class="project-details">
-          <p class="project-name">Google</p>
+          <h4 class="project-name">Google</h4>
           <p>
             Search engine which I designed to enable users to easily find web
             pages on the internet.<br>
@@ -107,9 +108,11 @@
           <a href="https://www.google.co.uk/">View Website</a>
         </div>
       </article>
+      </div>
     </section>
-    <h2>Skills</h2>
-    <section id="skills" class="inner-grid snap-scroll">
+    <section id="skills" class="snap-scroll">
+        <h2>Skills</h2>
+      <div class="inner-grid">
       <article class="skill">
         <h3>Front End</h3>
         <div class="skill-bar">
@@ -194,6 +197,7 @@
           <div class="vs-bar">Visual Studio<span>75%</span></div>
         </div>
       </article>
+      </div>
     </section>
     <section id="contact" class="snap-scroll">
       <h2>Contact Me</h2>
